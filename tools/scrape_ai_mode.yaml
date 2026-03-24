@@ -1,0 +1,51 @@
+identity:
+  name: "scrape_ai_mode"
+  author: "pangolinfo"
+  label:
+    en_US: "AI Mode Search"
+    zh_Hans: "纯 AI 模式搜索"
+description:
+  human:
+    en_US: "Directly retrieve a concise, AI-generated answer based on real-time web search results.
+      This tool bypasses the need for secondary LLM summarization, significantly reducing latency and
+      token consumption. Ideal for fast Q&A bots and cost-effective AI assistants."
+    zh_Hans: "直接获取基于实时搜索生成的纯 AI 聚合回答。该工具无需开发者再次调用大模型进行二次总结
+      显著降低了响应延迟和 Token 消耗。非常适合构建极速问答机器人或低成本 AI 助手。"
+  llm: "Pangolin API integration for web scraping."
+parameters:
+  - name: url
+    type: string
+    required: true
+    label:
+      en_US: "The URL of the website to scrape."
+      zh_Hans: 要抓取的网站URL。
+    human_description:
+      en_US: "Pangolin API integration for web scraping."
+      zh_Hans: "要抓取的网站URL。"
+    llm_description: "Pangolin API integration for web scraping."
+    form: llm
+  - name: screenshot
+    type: boolean
+    required: false
+    label:
+      en_US: "Screenshot or not."
+      zh_Hans: "是否截图"
+    human_description:
+      en_US: "Screenshot or not."
+      zh_Hans: "是否截图。"
+    llm_description: "Pangolin API integration for web scraping."
+    form: llm
+  - name: param
+    type: array
+    required: false
+    label:
+      en_US: "Multi-round dialogue parameters."
+      zh_Hans: "多轮对话参数。"
+    human_description:
+      en_US: "e.g., ['a', 'b', 'c']"
+      zh_Hans: "例如：['a', 'b', 'c']"
+    llm_description: "Pangolin API integration for web scraping."
+    form: llm
+extra:
+  python:
+    source: tools/scrape_ai_mode.py

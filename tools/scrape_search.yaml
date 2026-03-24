@@ -1,0 +1,38 @@
+identity:
+  name: "scrape_search"
+  author: "pangolinfo"
+  label:
+    en_US: "AI Overview SERP"
+    zh_Hans: "AI 搜索摘要"
+description:
+  human:
+    en_US: "Fetch a comprehensive AI-generated overview paired with structured search results and authoritative citations.
+      This tool provides the ultimate data foundation for building hallucination-free RAG systems, market research agents, and professional insight tools."
+    zh_Hans: "获取深度 AI 综述、结构化搜索列表及权威引用来源。该工具为构建无幻觉的 RAG 系统、市场调研Agent及专业情报工具提供了最完整的数据基础，支持信息追溯与可靠性验证。"
+  llm: "Pangolin API integration for web scraping."
+parameters:
+  - name: url
+    type: string
+    required: true
+    label:
+      en_US: "The URL of the website to scrape."
+      zh_Hans: 要抓取的网站URL。
+    human_description:
+      en_US: "The URL of the website to scrape."
+      zh_Hans: "要抓取的网站URL。"
+    llm_description: "Pangolin API integration for web scraping."
+    form: llm
+  - name: screenshot
+    type: boolean
+    required: false
+    label:
+      en_US: "Screenshot or not."
+      zh_Hans: "是否截图"
+    human_description:
+      en_US: "Screenshot or not."
+      zh_Hans: "是否截图。"
+    llm_description: "Pangolin API integration for web scraping."
+    form: llm
+extra:
+  python:
+    source: tools/scrape_search.py

@@ -1,0 +1,26 @@
+identity:
+  name: "scrape"
+  author: "pangolinfo"
+  label:
+    en_US: "AMZ Keyword Scrape"
+    zh_Hans: "亚马逊关键词抓取"
+description:
+  human:
+    en_US: "Pangolin API integration for web scraping."
+    zh_Hans: "用于网络爬虫的 Pangolin API 集成。"
+  llm: "Pangolin API integration for web scraping."
+parameters:
+  - name: url
+    type: string
+    required: true
+    label:
+      en_US: "The URL of the website to scrape."
+      zh_Hans: 要抓取的网站URL。
+    human_description:
+      en_US: "Pangolin API integration for web scraping."
+      zh_Hans: "要抓取的网站URL。"
+    llm_description: "Pangolin API integration for web scraping."
+    form: llm
+extra:
+  python:
+    source: tools/scrape.py

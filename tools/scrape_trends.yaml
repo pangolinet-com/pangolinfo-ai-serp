@@ -1,0 +1,60 @@
+identity:
+  name: "scrape_trends"
+  author: "pangolinfo"
+  label:
+    en_US: "Keyword Search Trends"
+    zh_Hans: "关键词搜索趋势"
+description:
+  human:
+    en_US: "Extract historical search volume, interest trends, and seasonal data for specific keywords.
+      Empowers AI agents to perform automated market research, SEO strategizing, and consumer behavior prediction with precision."
+    zh_Hans: "提取特定关键词的历史搜索量、兴趣趋势及季节性数据。赋能 AI Agent进行自动化的市场调研、SEO 策略制定及消费者行为预测，提供精准的数据支持。"
+  llm: "Pangolin API integration for web scraping."
+parameters:
+  - name: timeRange
+    type: string
+    required: true
+    label:
+      en_US: "Time range."
+      zh_Hans: 时间范围
+    human_description:
+      en_US: "Pangolin API integration for web scraping."
+      zh_Hans: "时间范围, 例如：'today 12-m'"
+    llm_description: "Pangolin API integration for web scraping."
+    form: llm
+  - name: region
+    type: string
+    required: true
+    label:
+      en_US: "The region code."
+      zh_Hans: "地区代码"
+    human_description:
+      en_US: "e.g., US"
+      zh_Hans: "例如：US"
+    llm_description: "Pangolin API integration for web scraping."
+    form: llm
+  - name: keywords
+    type: array
+    required: true
+    label:
+      en_US: "List of search keywords."
+      zh_Hans: "搜索关键词列表"
+    human_description:
+      en_US: "e.g., ['a', 'b']"
+      zh_Hans: "例如：['a', 'b']"
+    llm_description: "Pangolin API integration for web scraping."
+    form: llm
+  - name: language
+    type: string
+    required: true
+    label:
+      en_US: "Language"
+      zh_Hans: "语言"
+    human_description:
+      en_US: "e.g., en-US"
+      zh_Hans: "例如：en-US"
+    llm_description: "Pangolin API integration for web scraping."
+    form: llm
+extra:
+  python:
+    source: tools/scrape_trends.py

@@ -1,0 +1,34 @@
+identity:
+  author: "pangolinfo"
+  name: "pangolinfo"
+  label:
+    en_US: "Pangolinfo AI SERP"
+    zh_Hans: "Pangolinfo AI SERP"
+  description:
+    en_US: An advanced search intelligence plugin that equips your AI agents with real-time AI overviews,
+      standard SERP citations, keyword trends, and structured local map data.
+    zh_Hans: 一款高级搜索情报插件，为您的 AI 应用提供实时的 AI 搜索摘要、带权威引用源的自然搜索结果、关键词趋势以及本地地图商家数据。
+  icon: "icon.svg"
+
+credentials_for_provider:
+  api_key:
+    type: "secret-input"
+    required: true
+    placeholder:
+      en_US: "Please input your Pangolin API key"
+      zh_Hans: "请输入您的 Pangolin API 密钥"
+    help:
+      en_US: "Get your Pangolin API key from your Pangolin account settings."
+      zh_Hans: "从您的 Pangolin 账户设置中获取 Pangolin API 密钥。"
+    label:
+      en_US: "Pangolin API Key"
+      zh_Hans: "Pangolin API 密钥"
+
+tools:
+  - tools/scrape_ai_mode.yaml
+  - tools/scrape_search.yaml
+  - tools/scrape_trends.yaml
+  - tools/scrape_map.yaml
+extra:
+  python:
+    source: provider/pangolinfo.py

@@ -1,0 +1,93 @@
+identity:
+  name: "scrape_map"
+  author: "pangolinfo"
+  label:
+    en_US: "Map Data"
+    zh_Hans: "本地地图商家数据"
+description:
+  human:
+    en_US: "Scrape high-fidelity local business intelligence, including names, addresses, ratings,
+      and coordinates. Perfect for building local SEO agents, lead generation workflows, and regional competitor analysis tools."
+    zh_Hans: "抓取高保真的本地商家情报，包括名称、地址、评分、联系方式及经纬度。完美适用于构建本地 SEO agents、自动化获客流及区域竞品分析工具。"
+  llm: "Pangolin API integration for web scraping."
+parameters:
+  - name: query
+    type: string
+    required: true
+    label:
+      en_US: "Query keyword."
+      zh_Hans: "检索关键词"
+    human_description:
+      en_US: "Query keyword."
+      zh_Hans: "检索关键词"
+    llm_description: "Pangolin API integration for web scraping."
+    form: llm
+  - name: hl
+    type: string
+    required: false
+    label:
+      en_US: "Interface language."
+      zh_Hans: "界面语言"
+    human_description:
+      en_US: "Interface language."
+      zh_Hans: "界面语言"
+    llm_description: "Pangolin API integration for web scraping."
+    form: llm
+  - name: ll
+    type: string
+    required: false
+    label:
+      en_US: "Location parameters: latitude, longitude, zoom level."
+      zh_Hans: "定位参数：纬度,经度,缩放"
+    human_description:
+      en_US: "Location parameters: latitude, longitude, zoom level."
+      zh_Hans: "定位参数：纬度,经度,缩放"
+    llm_description: "Pangolin API integration for web scraping."
+    form: llm
+  - name: num
+    type: number
+    required: false
+    label:
+      en_US: "Items per page."
+      zh_Hans: "每页数量"
+    human_description:
+      en_US: "Items per page."
+      zh_Hans: "每页数量"
+    llm_description: "Pangolin API integration for web scraping."
+    form: llm
+  - name: from
+    type: number
+    required: false
+    label:
+      en_US: "Start of page."
+      zh_Hans: "分页起始"
+    human_description:
+      en_US: "Start of page."
+      zh_Hans: "分页起始"
+    llm_description: "Pangolin API integration for web scraping."
+    form: llm
+  - name: timeout
+    type: number
+    required: false
+    label:
+      en_US: "Task timeout."
+      zh_Hans: "任务超时时间"
+    human_description:
+      en_US: "Task timeout."
+      zh_Hans: "任务超时时间"
+    llm_description: "Pangolin API integration for web scraping."
+    form: llm
+  - name: url
+    type: string
+    required: false
+    label:
+      en_US: "The URL of the website to scrape."
+      zh_Hans: "要抓取的网站URL。"
+    human_description:
+      en_US: "The URL of the website to scrape."
+      zh_Hans: "指定地址采集，如果传这个参数其他参数无效"
+    llm_description: "Pangolin API integration for web scraping."
+    form: llm
+extra:
+  python:
+    source: tools/scrape_map.py
