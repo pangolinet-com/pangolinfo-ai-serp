@@ -209,7 +209,7 @@
 如遇任何问题：
 
 * **插件支持**: Support@pangolinfo.com
-* **API 官方文档**: [Pangolinfo Scrape API Documentation](https://docs.pangolinfo.com/en-index)
+* **API 官方文档**: [Pangolinfo Scraper API Documentation](https://docs.pangolinfo.com/en-index)
 * **官方网站**: 访问 [Pangolinfo](https://www.pangolinfo.com/zh/)
 
 ## 更新与日志 (Updates and Changelog)

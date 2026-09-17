@@ -216,7 +216,7 @@ Please refer to the Privacy Policy on the Pangolinfo website for information on 
 For issues or questions:
 
 * **Plugin Support**: Support@pangolinfo.com
-* **API Documentation**: [Pangolinfo Scrape API Documentation](https://docs.pangolinfo.com/en-index)
+* **API Documentation**: [Pangolinfo Scraper API Documentation](https://docs.pangolinfo.com/en-index)
 * **Official Website**: Visit [Pangolinfo](https://en.pangolinfo.com/)
 
 ## Updates and Changelog
